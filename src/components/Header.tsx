@@ -1,18 +1,29 @@
 import mizvaultlogo from "../assets/mizovault_logo.svg";
+import { Logo } from "../lib/Logo";
+
 export const Header = () => {
+    const logoStyles = {width: "40px"}
     return(
-        <header className="w-full bg-dark-10 p-4">
+        <header className="w-full p-4">
             <div className="w-full flex items-center justify-between p-2">
                 {/* Logo */}                
                 <div className="flex items-center gap-4">
-                    <img src={mizvaultlogo} alt="MizoVault - Logo" width="60px"/>
-                    <span className="text-white font-bold text-xl">Mizo<span className="text-darkgrey-10">Vault</span></span>
+                    <Logo url="/" logoImg={mizvaultlogo} logoImgAlt="MizoVault Logo" logoText="MizoVault" style={logoStyles}/>
                 </div>
                 {/* Navigation */}
                 <nav>
+                    <ul className="text-white flex gap-6 border border-[#1b1b1b] bg-[#060606] px-8 py-4 rounded-full overflow-hidden">
+                        <li>Products</li>
+                        <li>Solutions</li>
+                        <li>Resources</li>
+                        <li>Partners</li>
+                        <li>Pricing</li>
+                    </ul>
+                </nav>
+                {/* Action Buttons */}
+                <nav>
                     <ul className="gap-2 flex">
-                        <button className="bg-white font-bold px-4 py-2 rounded-md">Log In</button>
-                        <button className="text-white font-bold px-4 py-2 border rounded-md">Register</button>
+                        <button className="text-white px-8 py-4 border bg-[#060606] border-[#1b1b1b] rounded-full">Try for free</button>
                     </ul>
                 </nav>
             </div>
