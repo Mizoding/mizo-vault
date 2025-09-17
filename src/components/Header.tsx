@@ -4,7 +4,7 @@ import { Logo } from "../lib/Logo";
 export const Header = () => {
     const logoStyles = {width: "40px"}
     return(
-        <header className="w-full p-4">
+        <header className="w-full p-4 border border-b-[#1b1b1b]">
             <div className="w-full flex items-center justify-between p-2">
                 {/* Logo */}                
                 <div className="flex items-center gap-4">
